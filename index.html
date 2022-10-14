@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor Cifra de César e Base64</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+      <h1><strong>Conversor de Cifra de César e Base64 </strong></h1>
+
+      
+      <p>
+       Acifra de César é uma das mais simples e conhecidas técnicas de criptografia. É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, que se apresenta o alfabeto abaixo dela um número fixo de vezes.Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante. O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais. E a Base64 é um método para codificação de dados para transferência de dados binários em forma de texto pela internet.
+      </p>
+      <br>
+      <form id="formulario">
+
+        <div id="inserir-texto-div">
+
+          <label id="inserir-texto-label">Insira o texto abaixo:</label>
+          <br>
+          <textarea name="texto" type="text" id="inserir-texto-textarea" class="textarea-estilo"></textarea>
+
+        </div>
+        
+        <div id="escolha-div" >
+
+          <label for="escolha-select" id="escolha-label-estilo">Escolha a base a ser utilizada</label>
+          
+          <select id="escolha-select" class="select-estilo" onChange= criaInput()>
+
+            <option>Selecione</option>
+
+            <option name="opcao">Cifra de César</option>
+
+            <option name="opcao">Base64</option>
+          
+          </select>
+
+        </div>
+        
+        <div id="incremento-e-radiobtns-div">
+          
+          <div id="incremento-div" style="display: none"></div>
+
+          <div id="radiobtns-div">
+
+            <div>
+
+              <input id="cod" class="radiobtn-estilo" type="radio" name="radio-btn" onclick="alteraMsg()">
+
+              <label for="cod" class="radiobtn-label-estilo">Codificar</label>
+
+            </div>
+
+      
+
+            <div>
+
+              <input id="decod" class="radiobtn-estilo" type="radio" name="radio-btn" 
+              onclick="alteraMsg()">
+
+              <label for="decod" class="radiobtn-label-estilo">Decodificar</label>
+              <br>
+            </div>
+          
+          </div>
+
+        </div>
+
+        <button id="botao-executar" >Executar</button>
+        
+        <div id="resultado-div">
+
+          <label for="resultado-textarea" id="resultado-label-estilo"> Resultado: </label>
+          <br>
+          <textarea id="resultado-textarea"class="textarea-estilo"></textarea>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="js.js"></script>
+
+</body>
+</html>
